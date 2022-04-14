@@ -1,0 +1,42 @@
+[
+    {
+      "name"              : "eth",
+      "cwd"               : "/home/root/eth-net-intelligence-api/",
+      "script"            : "bin/eth.sh",
+      "args"              : "ethpassword",
+      "log_date_format"   : "YYYY-MM-DD HH:mm Z",
+      "log_file"          : "/home/root/logs/eth-log.log",
+      "out_file"          : "/home/root/logs/eth-out.log",
+      "error_file"        : "/home/root/logs/eth-err.log",
+      "merge_logs"        : false,
+      "watch"             : false,
+      "max_restarts"      : 10,
+      "exec_interpreter"  : "bash",
+      "exec_mode"         : "fork_mode"
+    },
+    {
+      "name"              : "node-app",
+      "cwd"               : "/home/root/eth-net-intelligence-api/",
+      "script"            : "app.js",
+      "log_date_format"   : "YYYY-MM-DD HH:mm Z",
+      "log_file"          : "/home/root/logs/node-app-log.log",
+      "out_file"          : "/home/root/logs/node-app-out.log",
+      "error_file"        : "/home/root/logs/node-app-err.log",
+      "merge_logs"        : false,
+      "watch"             : false,
+      "max_restarts"      : 10,
+      "exec_interpreter"  : "node",
+      "exec_mode"         : "fork_mode",
+      "env": {
+        "NODE_ENV": "production",
+        "RPC_HOST": "140.115.52.52",
+        "RPC_PORT": "7414",
+        "LISTENING_PORT": "30303",
+        "INSTANCE_NAME": "nodeeeeeeeee",
+        "CONTACT_DETAILS": ":)))))))))",
+        "WS_SERVER": "http://140.115.52.52:3002",
+        "WS_SECRET": "7414",
+        "VERBOSITY": 2
+    }
+    }
+]
