@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  api1:
+    image: eth-api
+    volumes:
+      - /home/server/eth-api/eth-api/1/.env:/home/root/eth-net-intelligence-api/.env
+
+  api2:
+    image: eth-api
+    volumes:
+      - /home/server/eth-api/eth-api/2/.env:/home/root/eth-net-intelligence-api/.env
